@@ -94,10 +94,18 @@ class Todo extends $pb.GeneratedMessage {
 class GetTodoByIdRequest extends $pb.GeneratedMessage {
   factory GetTodoByIdRequest({
     $core.int? id,
+    $core.String? title,
+    $core.bool? completed,
   }) {
     final $result = create();
     if (id != null) {
       $result.id = id;
+    }
+    if (title != null) {
+      $result.title = title;
+    }
+    if (completed != null) {
+      $result.completed = completed;
     }
     return $result;
   }
@@ -107,6 +115,8 @@ class GetTodoByIdRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetTodoByIdRequest', createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'id', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..aOB(3, _omitFieldNames ? '' : 'completed')
     ..hasRequiredFields = false
   ;
 
@@ -139,6 +149,24 @@ class GetTodoByIdRequest extends $pb.GeneratedMessage {
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get title => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set title($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTitle() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTitle() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get completed => $_getBF(2);
+  @$pb.TagNumber(3)
+  set completed($core.bool v) { $_setBool(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCompleted() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCompleted() => clearField(3);
 }
 
 
