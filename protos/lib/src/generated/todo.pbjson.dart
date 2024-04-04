@@ -28,3 +28,15 @@ final $typed_data.Uint8List todoDescriptor = $convert.base64Decode(
     'CgRUb2RvEg4KAmlkGAEgASgFUgJpZBIUCgV0aXRsZRgCIAEoCVIFdGl0bGUSHAoJY29tcGxldG'
     'VkGAMgASgIUgljb21wbGV0ZWQ=');
 
+@$core.Deprecated('Use getTodoByIdRequestDescriptor instead')
+const GetTodoByIdRequest$json = {
+  '1': 'GetTodoByIdRequest',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 5, '10': 'id'},
+  ],
+};
+
+/// Descriptor for `GetTodoByIdRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getTodoByIdRequestDescriptor = $convert.base64Decode(
+    'ChJHZXRUb2RvQnlJZFJlcXVlc3QSDgoCaWQYASABKAVSAmlk');
+

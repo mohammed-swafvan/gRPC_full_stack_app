@@ -1,10 +1,13 @@
 import 'dart:io';
 
 import 'package:protos/protos.dart';
+import 'package:server/todo_service.dart';
 
 void main(List<String> arguments) async {
   final server = Server.create(
-    services: [],
+    services: [
+      TodoService(),
+    ],
     codecRegistry: CodecRegistry(codecs: const [GzipCodec(), IdentityCodec()]),
   );
 
